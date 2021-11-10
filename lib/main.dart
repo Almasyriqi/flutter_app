@@ -18,23 +18,38 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Login'),
           ),
-          body: Column(
-            children: <Widget>[
-              const TextField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(labelText: 'Email'),
-              ),
-              const TextField(
-                keyboardType: TextInputType.visiblePassword,
-                decoration: InputDecoration(labelText: 'Password'),
-              ),
-              ElevatedButton(
-                onPressed: () => print('Login clicked'),
-                child: const Text('Login'),
-                style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 36)),
-              )
-            ],
+          body: Container(
+            color: Theme.of(context).primaryColorDark,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Card(
+                  elevation: 8,
+                  margin: const EdgeInsets.only(left: 16.0, right: 16.0),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: <Widget>[
+                        const TextField(
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(labelText: 'Email'),
+                        ),
+                        const TextField(
+                          keyboardType: TextInputType.visiblePassword,
+                          decoration: InputDecoration(labelText: 'Password'),
+                        ),
+                        ElevatedButton(
+                          onPressed: () => print('Login clicked'),
+                          child: const Text('Login'),
+                          style: ElevatedButton.styleFrom(
+                              minimumSize: const Size(double.infinity, 36)),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           )),
     );
   }
