@@ -39,7 +39,8 @@ class Register extends StatelessWidget {
                             InputDecoration(labelText: 'Confirm Password'),
                       ),
                       ElevatedButton(
-                        onPressed: () => print('Login clicked'),
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/categories'),
                         child: const Text('Register'),
                         style: ElevatedButton.styleFrom(
                             minimumSize: const Size(double.infinity, 36)),
